@@ -66,8 +66,8 @@ def comments(request, article_id):
         comment = Comment(user=request.user)
         comment.comment = request.POST['comment']
         comment.article = article
-        if (comment.save()):
-            return JsonResponse({"result": "success"})
-        else:
-            return JsonResponse({"result": "failed"})
+        comment.save()
+
+        data = serializers.serialize('json', [comment, ], use_natural_foreign_keys=True)
+        return JsonResponse(data, safe=False)
     

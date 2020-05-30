@@ -41,8 +41,9 @@ window.Blog = window.Blog || {};
             headers: {
                 'X-CSRFToken': getCookie('csrftoken')
             },
-            success: () => {
-                addCommentToDOM(comment);
+            success: response => {
+                const result = JSON.parse(response)[0];
+                addCommentToDOM(result.fields);
                 $('#comment').val('');
             }
         });
