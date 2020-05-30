@@ -21,7 +21,7 @@ Feature-wise so far, if a user has an account, she can
 
 But our comment section needs some attention...
 
-![Current Comments Screenshot](doc/comments.png)
+![Current Comments Screenshot](docs/comments.png)
 
 * The like button doesn't work
 
@@ -37,7 +37,7 @@ Our site uses the [Bulma](https://bulma.io) CSS framework.
 
 We'd like you to improve our comments section so that it looks like this:
 
-![New Comments Screenshot](doc/proposed_comments.png)
+![New Comments Screenshot](docs/proposed_comments.png)
 
 ### Requirements
 Comments should should be updated to look similar to the screenshot above. You do not have to implement avatars; the existing placeholders for user images can stay as-is.
@@ -122,7 +122,7 @@ Once you're finished implementing the requirements
 
 4. Push your code to your submission branch. `git push origin johnnybgood-submission`
 
-5. Submit a pull request in github. In your pull request and/or in the pull request comments, explain how you approached the solution. If you weren't able to solve any portion, let us know where you hit roadblocks.
+5. Submit a pull request in github and add "ckirkw" as a reviewer. In your pull request and/or in the pull request comments, explain how you approached the solution. If you weren't able to solve any portion, let us know where you hit roadblocks.
 
 Your submission will be evaluated based on **code cleanliness and correctness**. Add python or javascript comments to your changes where appropriate. We want to see your best code, database, and algorithm design.
 
