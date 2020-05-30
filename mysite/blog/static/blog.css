@@ -1,0 +1,19 @@
+.container.post-body {
+    margin-bottom: 30px;
+}
+
+.comments-header, .comments-list {
+    margin-top: 20px;
+}
+
+.comments-list {
+    margin-bottom: 20px;
+}
+
+.comments-list .level.is-mobile .level-item:not(:last-child) {
+    margin-right: 0.2rem;
+}
+
+.comments-list .level.is-mobile .level-item.link{
+    margin-left: 0.2rem;
+}

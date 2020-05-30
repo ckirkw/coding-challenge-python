@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} My Fantastic Blog Site - {{ article.title}} - Create/Edit {% endblock %}
+
+{% block content %}
+<form action="{% url 'edit' article.id %}" method="post">
+    {% csrf_token %}
+
+    <div class="field">
+        <label class="label" for="title">Title</label>
+        <div class="control">
+            <input class="input" type="text" value="{{ article.title }}" id="title" name="title"/>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label" for="body">Body</label>
+        <div class="control">
+            <textarea class="textarea" id="body" name="body">{{ article.body }}</textarea>
+        </div>
+    </div>
+
+<button class="button is-primary" type="submit">Save</button>
+</form>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %} My Fantastic Blog Site - {{ article.title}} {% endblock %}
+
+if (result.length == 0)
+{% block content %}
+
+<h2 class="is-size-3">{{ article.title }}</h2>
+<p class="has-text-grey">By {{ article.author }}</p>
+
+<div class="container post-body">
+<p>{{ article.body }}</p>
+</div>
+
+{% if can_edit %}
+<a href="{% url 'edit' article.id %}">Edit</a>
+{% endif %}
+
+<!--Begin comments section-->
+<h2 class="is-size-4 comments-header">Comments</h2>
+{% if is_logged_in %}
+<div class="field">
+    <label class="label" for="comment">Submit comment</label>
+    <div class="control">
+        <textarea id="comment" class="textarea" name="comment" placeholder="Start commenting here..." oninput="Blog.checkSubmitEnabled()"></textarea>
+    </div>
+</div>
+<button id="comment_submit" class="button is-primary" type="submit" onclick="Blog.submitComment('{{ article.id }}')">Submit</button>
+{% endif %}
+
+<div class="comments-list" id="comment_list">
+    
+</div>
+
+<span id="no_comments" style="display:none">
+    No comments have been added
+</span>
+{% endblock %}
+
+{% block script %}
+<script>
+    $(function(){
+        Blog.loadComments('{{ article.id }}');
+    });
+</script>
+{% endblock %}
+<!--End comments section-->
