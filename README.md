@@ -79,29 +79,52 @@ Comments should should be updated to look similar to the screenshot above. You d
 
 ### Running the server and exploring the app
 1. Install Python and [Django](https://docs.djangoproject.com/en/3.0/intro/install/). No database is necessary.
-2. Clone this repository
+
+2. Clone this repository. `git clone git@github.com:ckirkw/coding-challenge-python.git` or `git clone https://github.com/ckirkw/coding-challenge-python.git`
+
 3. Using a command line terminal, navigate to `/path/to/coding-challenge/mysite`
+
 4. Type `python manage.py migrate`
+
 5. Type `python manage.py createsuperuser` to create an admin user
+
 6. Type `python manage.py runserver` to start the server
-7. Navigate to http://localhost:8000/admin to log in as an admin and create additional users and sample articles and posts
+
+7. Navigate to http://localhost:8000/admin to log in as an admin and 
+create additional users and sample articles and posts
+
 8. Logout from the admin site then navigate to http://localhost:8000/auth/login to log into the website. You can navigate to http://localhost:8000/auth/logout to log out. (The authentication feature is a work in progress, so there are no log in or log out links in the app)
+
 9. Once you're finished using the app to understand how it works, start looking at the code. 
+
 10. The comments section is rendered in the template at
 [mysite/blog/templates/articles/detail.html](mysite/blog/templates/articles/detail.html). (Search for `Begin comments section`)
+
 11. The [blog.js](mysite/blog/static/blog.js) file does the client-side handling for comments - retrieving comments when the page loads, adding new comments when posted
+
 12. The [views.py](mysite/blog/views.py) file has all of the "controlling" server-side logic for articles and comments
 
 ### Resources
 * [The Django Documentation](https://docs.djangoproject.com/en/3.0/)
+
 * [The Bulma Documentation](https://bulma.io/documentation/)
   * [Bulma Media Objects](https://bulma.io/documentation/layout/media-object/)
 
 ## Submitting Your Work
 
-Once you're finished with the requirements, remove all \_\_pycache\_\_ folders, and remove the .git folder. Then zip up the coding-challenge-python directory, and send the zip to us by email. Inside the email or in a separate document, explain how you approached the solution. If you weren't able to solve the problem, let us know where you hit roadblocks.
+Once you're finished implementing the requirements
 
-Your submission will be evaluated based on **code cleanliness and correctness**. Add comments to your changes where appropriate. We want to see your best code, database, and algorithm design.
+1. Send your github account name to the recruiter so that you can be added as a collaborator
+
+2. Once you have been added as a collaborator, create a local branch named yourgithubaccountname-submission. For example `git checkout -b johnnybgood-submission`.
+
+3. Add and commit your code to your submission branch. `git commit -am 'This is my submission'` (you may use whatever commit message you feel is appropriate)
+
+4. Push your code to your submission branch. `git push origin johnnybgood-submission`
+
+5. Submit a pull request in github. In your pull request and/or in the pull request comments, explain how you approached the solution. If you weren't able to solve any portion, let us know where you hit roadblocks.
+
+Your submission will be evaluated based on **code cleanliness and correctness**. Add python or javascript comments to your changes where appropriate. We want to see your best code, database, and algorithm design.
 
 ## Questions or Difficulties?
 If you have any questions about the assignment or difficulties running the project, let us know.
